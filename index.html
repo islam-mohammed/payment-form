@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Secure Payment Gateway</title>
+  <script src="src/assets/js/expirationdate.js"></script>
+  <script src="https://pay.sandbox.datatrans.com/upp/payment/js/secure-fields-2.0.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/src/assets/css/styles.css">
+</head>
+
+<body>
+  <form id="payment-form">
+
+    <!-- Cardholder Name Field -->
+    <div class="form-group">
+      <input type="text" id="cardholder-name" placeholder="Cardholder Name" required>
+    </div>
+
+    <!-- Payment Fields Container -->
+    <div id="payment-container" class="inline-wrapper">
+      <!-- Card Number -->
+      <div id="card-number-container" class="secure-field secure-field__input secure-field__base secure-field__has-actions secure-field__has-actions-left secure-field__has-card-icon">
+        <div class="secure-field--input-container" style="height: 40px">
+          <div class="secure-field--actions">
+            <span class="secure-field--action secure-field--action__card-icon">
+              <span class="secure-field--action-card-wrap">
+                <img class="secure-field--card-icon secure-field--card-icon__empty" src="src/assets/img/card-empty.svg">
+                <img class="secure-field--card-icon secure-field--card-icon__error" src="src/assets/img/card-error.svg">
+                <img class="secure-field--card-icon secure-field--card-icon__recognized-card" src="src/assets/img/card-recognized.svg">
+                <img class="secure-field--card-icon secure-field--cvv-icon secure-field--card-icon__empty" src="src/assets/img/cvc-empty.svg">
+              </span>
+            </span>
+          </div>
+          <div class="secure-field--input" id="card-number"></div>
+        </div>
+      </div>
+
+      <!-- Expiration Date -->
+      <div>
+        <input id="expiry" name="expiry" placeholder="MM/YY" type="tel" maxlength="7" autocomplete="cc-exp" />
+      </div>
+
+      <!-- CVV -->
+      <div id="cvv-container" class="secure-field secure-field__input secure-field__base">
+        <div class="secure-field--input-container" style="height: 40px">
+          <div class="secure-field--input" id="cvv-number"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" id="form-submit">
+        Submit Payment
+      </button>
+      <pre id="form-result"></pre>
+    </div>
+  </form>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/assets/js/analytics.js"></script>
+</body>
+</html>
