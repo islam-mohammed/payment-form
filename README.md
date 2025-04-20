@@ -24,7 +24,7 @@ A PCI-compliant payment page implementation using PCI Proxy's Secure Fields and 
 1.  **Clone the repository**
     Replace `your-username` with your actual GitHub username or organization name.
     ```bash
-    git clone [https://github.com/your-username/secure-payment-gateway.git](https://github.com/your-username/secure-payment-gateway.git)
+    git clone [https://github.com/islam-mohammed/payment-form](https://github.com/islam-mohammed/payment-form)
     cd secure-payment-gateway
     ```
 
